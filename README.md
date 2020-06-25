@@ -1,4 +1,4 @@
-|Memes Library build status|[![Build Status](https://travis-ci.com/LCwPro/memeslib.svg?token=T9EQsW6FpPidGymz5r1x&branch=master)](https://travis-ci.com/LCwPro/memeslib)|
+|[Memes Library](https://LCwPro.github.io/memeslib/) build status|[![Build Status](https://travis-ci.com/LCwPro/memeslib.svg?token=T9EQsW6FpPidGymz5r1x&branch=master)](https://travis-ci.com/LCwPro/memeslib)|
 |-|-|
 
 # Github Pages Gallery
