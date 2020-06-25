@@ -1,3 +1,6 @@
+|Memes Library build status|[![Build Status](https://travis-ci.com/LCwPro/memeslib.svg?token=T9EQsW6FpPidGymz5r1x&branch=master)](https://travis-ci.com/LCwPro/memeslib)|
+|-|-|
+
 # Github Pages Gallery
 Host your photo/video gallery in Github pages easily using Thumbsup & Travis CI for free.
 
@@ -84,7 +87,7 @@ Now visit your forked repo on GitHub. Click on the settings tab. Scroll down to 
 Now you can see the URL of the site:
 ![url](https://user-images.githubusercontent.com/8397274/48008065-f639b880-e13e-11e8-9f8e-72d27ad7cc30.png)
 
-Rename the repo if you need something like `/gallery'. You can even set a custom domain to your site: https://help.github.com/articles/adding-or-removing-a-custom-domain-for-your-github-pages-site/
+Rename the repo if you need something like `/gallery`. You can even set a custom domain to your site: https://help.github.com/articles/adding-or-removing-a-custom-domain-for-your-github-pages-site/
 
 ## Limitations
 * Github Pages [terms of service](https://help.github.com/articles/github-terms-of-service/):
