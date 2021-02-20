@@ -6,6 +6,7 @@
       <meta name="viewport" content="width=device-width, user-scalable=no" />
       <title>Memes Library - Home</title>
       <link rel="stylesheet" href="public/lightgallery/css/lightgallery.css" />
+      <link rel="stylesheet" href="public/lightslider/css/lightslider.min.css" />
       <link rel="stylesheet" href="public/videojs/video-js.min.css" />
       <link rel="stylesheet" href="public/lightgallery/css/lg-exif.min.css" />
       <link rel="stylesheet" href="public/core.css" />
@@ -14,7 +15,6 @@
   </head>
 
   <body>
-
     
     <div id="container">
     
@@ -32,6 +32,7 @@
     <a class="breadcrumb-item" href="index.html">Home</a>
       </nav>
     
+    
       <!--
         Nested albums, if any
       -->
@@ -45,22 +46,30 @@
           
           <div class="albumList"
               data-sub-html=""
-              data-download-url="media/original/What, Fxxk.png"data-src="media/large/What, Fxxk.png"data-exthumbimage="media/thumbs/What, Fxxk.png"
-              data-filename="What, Fxxk.png"
-          
-          ><a href="media/large/What, Fxxk.png"><img src="media/small/What, Fxxk.png" alt="What, Fxxk.png" />
+              data-download-url="media/original/What,%20Fxxk.png"data-src="media/large/What,%20Fxxk.png"data-exthumbimage="media/thumbs/What,%20Fxxk.png"data-filename="What, Fxxk.png"><a href="media/large/What,%20Fxxk.png"><img
+                      src="media/small/What,%20Fxxk.png"
+                      width="351.2195121951219"
+                      height="300"alt="What, Fxxk.png"/>
               </a>
           
           </div>      
           <div class="albumList"
               data-sub-html=""
-              data-download-url="media/original/陈仕豪：泥垢了.png"data-src="media/large/陈仕豪：泥垢了.png"data-exthumbimage="media/thumbs/陈仕豪：泥垢了.png"
-              data-filename="陈仕豪：泥垢了.png"
-          
-          ><a href="media/large/陈仕豪：泥垢了.png"><img src="media/small/陈仕豪：泥垢了.png" alt="陈仕豪：泥垢了.png" />
+              data-download-url="media/original/%E6%B3%A5%E5%9E%A2%E4%BA%86.png"data-src="media/large/%E6%B3%A5%E5%9E%A2%E4%BA%86.png"data-exthumbimage="media/thumbs/%E6%B3%A5%E5%9E%A2%E4%BA%86.png"data-filename="泥垢了.png"><a href="media/large/%E6%B3%A5%E5%9E%A2%E4%BA%86.png"><img
+                      src="media/small/%E6%B3%A5%E5%9E%A2%E4%BA%86.png"
+                      width="205.71428571428572"
+                      height="300"alt="泥垢了.png"/>
               </a>
           
           </div>  </ul>
+    
+      <!--
+        Pagination
+      -->
+    
+      <!--
+        Zip file link
+      -->
     
       <!--
         Optional footer
@@ -80,6 +89,7 @@
     <script src="public/videojs/video.min.js"></script>
     <!-- LightGallery -->
     <script src="public/lightgallery/js/lightgallery.js"></script>
+    <script src="public/lightslider/js/lightslider.min.js"></script>
     <script src="public/lightgallery/js/lg-autoplay.js"></script>
     <script src="public/lightgallery/js/lg-pager.js"></script>
     <script src="public/lightgallery/js/lg-thumbnail.js"></script>
@@ -109,12 +119,38 @@
         // Init justified gallery for photos
         $("#media").justifiedGallery({
           selector: '.albumList',
+          waitThumbnailsLoad: false,
           margins: 10,
           rowHeight: 250,
           maxRowHeight: 275,
         });
       });
     </script>
+
+      <script id="slider-js" data-interval="">
+        $(document).ready(function () {
+          let waitTime = 1000;
+
+          try {
+            waitTime = parseInt($("#slider-js").data("interval"));
+          } catch (e) {
+            console.error("Invalid speed value for slider: " + waitTime + "\n" + e);
+          }
+
+          $("#lightSlider").lightSlider({
+            auto: true,
+            loop: true,
+            item: 1,
+            gallery: true,
+            pause: waitTime,
+            onSliderLoad: (el) => {
+              el.lightGallery({
+                selector: "#lightSlider li"
+              })
+            }
+          });
+        });
+      </script>
 
 
   </body>
