@@ -1,0 +1,23 @@
+body, header {
+	background-color: #181a1b;
+}
+
+body, header, h1 a, nav.breadcrumbs a {
+	color: #bdb7af;
+}
+
+footer, nav.pagination, nav.pagination a, #zip {
+	color: #a8a095;
+}
+
+footer a {
+	color: #2dc1f1;
+}
+
+nav.breadcrumbs {
+	border-bottom-color: #3a3e41;
+}
+
+#zip a {
+	color: #3da8ff;
+}
