@@ -12,16 +12,12 @@ jobs:
     if: github.repository != 'gautamkrishnar/github-pages-gallery'
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout 🛎️
-        uses: actions/checkout@v2.3.1
-        with:
-          persist-credentials: false
-      - name: Build Gallery 🔧
+      - name: Checkout
+        uses: actions/checkout@v2.3.4
+      - name: Build Gallery
         run: docker run -v "$(pwd):/work" thumbsupgallery/thumbsup /bin/sh -c "cd /work/ && thumbsup --config config.json"
-      - name: Deploy to Github Pages 🚀
-        uses: JamesIves/github-pages-deploy-action@3.7.1
+      - name: Deploy to Github Pages
+        uses: JamesIves/github-pages-deploy-action@4.1.1
         with:
-            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-            BRANCH: gh-pages
-            FOLDER: build_output
-            CLEAN: true
+          branch: gh-pages
+          folder: build_output
