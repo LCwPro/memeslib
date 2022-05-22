@@ -8,7 +8,7 @@
 	"cleanup": true,
 	"theme": "flow",
 	"theme-settings": "./flow_options.json",
-	"theme-style": "./custom.css",
-	"footer": "Copyright &copy; 2020&mdash;2021 LCw Productions",
+	"css": "./custom.css",
+	"footer": "Copyright &copy; 2020&mdash;2022 LCw Productions",
 	"usage-stats": false
 }
