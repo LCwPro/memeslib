@@ -9,6 +9,6 @@
 	"theme": "flow",
 	"theme-settings": "./flow_options.json",
 	"css": "./custom.css",
-	"footer": "Copyright &copy; 2020&mdash;2022 LCw Productions",
+	"footer": "Copyright &copy; 2020&mdash;2024 LCw Productions",
 	"usage-stats": false
 }
